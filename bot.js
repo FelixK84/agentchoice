@@ -1,8 +1,7 @@
-var path = require('path');
-var CronJob = require('cron').CronJob;
-var mysql_modul = require(path.join(__dirname, 'module', 'mysql_modul'));
+var timer = require('timer'),
+    mysql_modul = require('module/mysql_modul');
 
-var job = new CronJob('*/4 * * * * *', () => {
+timer('*/4 * * * * *', () => {
     Promise.all([
             mysql_modul.getrate('btc_eth'),
             mysql_modul.getrate('eth_zec'),
@@ -25,7 +24,7 @@ var job = new CronJob('*/4 * * * * *', () => {
                 });
             }
         });
-}, null, true);
+});
 
 function calcho(da) {
     return ((da[0]) * (da[1]) * (1 / da[2]));

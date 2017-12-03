@@ -1,6 +1,5 @@
-var path = require('path');
-var mysql = require('mysql');
-var dbc = require(path.join(__dirname, '..', 'config', 'dbc'));
+var mysql = require('mysql'),
+    dbc = require('../config/dbc');
 
 module.exports = {
 
