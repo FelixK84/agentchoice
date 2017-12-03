@@ -1,5 +1,5 @@
 var timer = require('./module/timer'),
-    mysql_modul = require('module/mysql_modul');
+    mysql_modul = require('./module/mysql_modul');
 
 timer('*/4 * * * * *', () => {
     Promise.all([
