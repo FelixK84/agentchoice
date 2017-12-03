@@ -38,7 +38,7 @@ module.exports = {
             dbc.getconnection((err, con) => {
                 con.connect();
 
-                var queryString = "SELECT rate FROM ? ORDER BY `id` DESC LIMIT 1";
+                var queryString = "SELECT rate FROM ?? ORDER BY `id` DESC LIMIT 1";
 
                 con.query(queryString, [pair], (err, results, fields) => {
                     con.end();
