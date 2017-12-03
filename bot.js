@@ -22,8 +22,6 @@ var job = new CronJob('*/4 * * * * *', () => {
             da[2] = {
                 'btczec': rates[2]
             };
-        })
-        .then(() => {
             if (da.length !== 0) {
                 console.log('btceth: ' + da[0].btceth);
                 console.log('ethzec: ' + da[1].ethzec);

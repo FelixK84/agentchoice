@@ -41,7 +41,7 @@ var Mysql_modul = {
 
                 var queryString = "SELECT rate FROM ? ORDER BY `id` DESC LIMIT 1";
 
-                con.query(queryString, [pair, pair], (err, results, fields) => {
+                con.query(queryString, [pair], (err, results, fields) => {
                     con.end();
                     if (err) {
                         console.error(err);
