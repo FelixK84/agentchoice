@@ -46,7 +46,7 @@ module.exports = {
                         console.error(err);
                         reject(Error(err.message));
                     } else {
-                        resolve(results.rate);
+                        resolve(results[0].rate);
                     }
                 });
             });
