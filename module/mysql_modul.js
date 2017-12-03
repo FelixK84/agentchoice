@@ -2,7 +2,7 @@ var path = require('path');
 var mysql = require('mysql');
 var dbc = require(path.join(__dirname, '..', 'config', 'dbc'));
 
-var Mysql_modul = {
+module.exports = {
 
     insert_factor: (factor, ratearray, callback) => {
 
@@ -54,5 +54,3 @@ var Mysql_modul = {
         });
     }
 };
-
-module.exports = Mysql_modul;
